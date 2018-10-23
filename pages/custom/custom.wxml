@@ -1,0 +1,7 @@
+<view class="page">
+  <view class='custom'>
+    <button plain open-type='contact'></button>
+    <image src='../../imgs/page-custom-logo.png'></image>
+    <text>点此联系客服</text>
+  </view>
+</view>

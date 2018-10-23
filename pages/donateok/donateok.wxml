@@ -1,0 +1,58 @@
+<view class="page">
+  <!-- 捐赠信息 -->
+  <view class='baseInfo'>
+    <view class='avatar'>
+      <image src='../../imgs/donate-ok.png'></image>
+    </view>
+    <view class='thanks'>
+      <text>感谢捐赠</text>
+    </view>
+    <view class='title'>
+      <text>{{project.Title}}</text>
+    </view>
+  </view>
+  <!-- 操作栏目 -->
+  <view class='action-section'>
+    <view class='item hasBorder'>
+      <view class='icon'>
+        <image src='../../imgs/donate-cert.png'></image>
+      </view>
+      <view class='title'>
+        <text class='main'>查看捐赠证书</text>
+      </view>
+      <view class='apply-btn' bindtap='certificate'>
+        <text>查看</text>
+      </view>
+    </view>
+    <view class='item'>
+      <view class='icon'>
+          <image src='../../imgs/donate-ticket.png'></image>
+      </view>
+      <view class='title'>
+        <text class='main'>发票申请</text>
+        <text class='sub'>单笔大于100元以上可以申请发票，单笔小于100元请到我的空间累计多比一起开具发票
+        </text>
+      </view>
+      <view class='apply-btn' bindtap='applyBill'>
+        <!-- <text class='disabled'>申请</text> -->
+        <text class='{{money >= 100? "": "disabled"}}'>申请</text> 
+      </view>
+    </view>
+  </view>
+  <!-- 类似项目 -->
+  <view class='list-wrap'>
+    <view class='flag'>
+      <text>类似项目</text>
+    </view>
+    <view class='list' wx:for="{{projectList}}" wx:key="{{index}}">
+      <view class='thumb'>
+        <image src='{{domainImage}}{{item.TitleImgURL}}'></image>
+      </view>
+      <view class='info'>
+        <text class='name'>{{item.Title}}</text>
+        <text class='detail'>我想要健康的活着，不想进冰冷的手术室，我想要回家我想要健康的活着，不想进冰冷的手术室，我想要回家我想要健康的活着，不想进冰冷的手术室，我想要回家我想要健康的活着，不想进冰冷的手术室，我想要回家我想要健康的活着，不想进冰冷的手术室，我想要回家</text>
+      </view>
+    </view>
+    
+  </view>
+</view>

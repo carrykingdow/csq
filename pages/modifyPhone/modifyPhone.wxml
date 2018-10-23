@@ -1,0 +1,18 @@
+<!--pages/modifyPhone/modifyPhone.wxml-->
+<form bindsubmit='savePhone'>
+  <view class='query-wrap'>
+    <view class='query-item'>
+      <input placeholder='原手机号' name="OldAccount" disabled='disabled' value='{{phone}}' placeholder-style='color:#ccc;'></input>
+    </view>
+    <view class='query-item'>
+      <input placeholder='新手机号' bindinput='getNewPhone' name="NewAccount" placeholder-style='color:#ccc;'></input>
+    </view>
+    <view class='query-item' >
+      <input placeholder='短信验证码' name="code" placeholder-style='color:#ccc;'></input>
+      <button class='btn' plain bindtap='sendSms'>
+        <block wx-if="{{clockNum < 61}}">{{clockNum}}</block>{{clockTxt}}</button>
+    </view>
+
+    <button form-type='submit' class="query-btn">保存</button>
+  </view>
+</form>

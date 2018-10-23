@@ -1,0 +1,99 @@
+<view class="page">
+  <!-- uesr info -->
+  <view class='top-wrap2'>
+    <view style='height:24rpx'></view>
+    <view class='u-bg'>
+    <view class='user-info'>
+      <view class='user-avatar'>
+        <image src='{{userInfo.HeadImgURL}}'></image>
+      </view>
+      <view class='user-detail'>
+        <view class='name-wrap'>
+           <text class='name'>{{userInfo.NickName}}</text>
+        <text class='id'>{{userInfo.UserNo}}</text>
+        </view>
+        <view class='my-flag'>好心人</view>
+      </view>
+      <image mode='aspectFit' src='/imgs/u-logo.png'></image>
+    </view>
+
+    </view>
+  </view>
+  <!-- record -->
+  <view class='record-wrap'>
+    <view class='item'>
+      <text class='num'>{{MoneyTotal}}</text>
+      <text class='title'>捐赠总额(元)</text>
+    </view>
+    <view class='item'>
+      <text class='num'>{{DonationTotal}}</text>
+      <text class='title'>爱心次数(笔)</text>
+    </view>
+  </view>
+
+  <!-- settings -->
+
+  <view class='settings-wrap'>
+    <navigator class='cell' url="/pages/myLove/myLove">
+      <view class='icon icon-user-love'>
+        <image src='../../imgs/icon-user-love.png'></image>
+      </view>
+      <text class='title'>爱心账户</text>
+    </navigator>
+    <navigator class='cell' url="/pages/myCoDonate/myCoDonate">
+      <view class='icon icon-user-together'>
+        <image src='../../imgs/icon-user-together.png'></image>
+      </view>
+      <text class='title'>我的一起捐</text>
+    </navigator>
+    <navigator class='cell' url='/pages/donateRecord/donateRecord'>
+      <view class='icon icon-user-record'>
+        <image src='../../imgs/icon-user-record.png'></image>
+      </view>
+      <text class='title'>捐赠记录</text>
+    </navigator>
+    <navigator class='cell' url="/pages/myCollect/myCollect">
+      <view class='icon icon-user-collect'>
+        <image src='../../imgs/icon-user-collect.png'></image>
+      </view>
+      <text class='title'>我的收藏</text>
+    </navigator>
+    <navigator class='cell' url="">
+      <view class='icon icon-user-security'>
+        <image src='../../imgs/icon-user-security.png'></image>
+      </view>
+      <text class='title' style='flex:1'>爱心保险</text>
+      <label style='color:#ccc;margin-right:28rpx;font-size:28rpx;'>建设中</label>
+    </navigator>
+  </view>
+  <view class='settings-wrap'>
+    <navigator class='cell' url="/pages/userInfo/userInfo">
+      <view class='icon icon-user-info'>
+        <image src='../../imgs/icon-user-info.png'></image>
+      </view>
+      <text class='title'>个人资料</text>
+    </navigator>
+
+
+    <navigator class='cell' url='/pages/safe/safe'>
+      <view class='icon icon-user-settings'>
+        <image src='../../imgs/icon-user-settings.png'></image>
+      </view>
+      <text class='title'>安全设置</text>
+    </navigator>
+
+
+    <navigator class='cell' url='/pages/invoice/invoice'>
+      <view class='icon icon-user-tickets'>
+        <image src='../../imgs/icon-user-tickets.png'></image>
+      </view>
+      <text class='title'>发票管理</text>
+    </navigator>
+    <navigator class='cell' url='/pages/addressList/addressList'>
+      <view class='icon icon-user-address'>
+        <image src='../../imgs/icon-user-address.png'></image>
+      </view>
+      <text class='title'>地址管理</text>
+    </navigator>
+  </view>
+</view>

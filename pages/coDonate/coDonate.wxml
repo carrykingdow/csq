@@ -1,0 +1,74 @@
+<view class="page">
+  <view class='info-wrap'>
+    <view class='thumb'>
+      <image src='{{domainImage}}{{project.TitleImgURL}}' mode='aspectFill'></image>
+    </view>
+    <view class='info'>
+      <text class='title'>{{project.Title}}</text>
+      <text class='detail'>{{project.TeamDetail}}</text>
+      <view class='progress'>
+        <view class='con'>还差
+          <text class='s'>{{project.cMoney}}</text>元</view>
+        <view class='con'>剩余
+          <text class='s'>{{project.cTime}}</text>天</view>
+      </view>
+    </view>
+
+  </view>
+  <form bindsubmit='next'>
+  <!-- 发起形式 -->
+  <view class='start-type'>
+    <text class='title'>发起形式</text>
+    <view class='sel-item'>
+      <view class='item {{typeCur==0?"item-cur":""}}' data-index="0" bindtap='selType'>
+        <view wx:if="{{typeCur==0}}" class='img-wrap'>
+          <image class='single' src='../../imgs/coDonate-single-cur.png'></image>
+        </view>
+
+        <image wx:else class='single' src='../../imgs/coDonate-single.png'></image>
+        <text>个人发起</text>
+      </view>
+      <view class='item {{typeCur==1?"item-cur":""}}' data-index="1" bindtap='selType'>
+        <view class='img-wrap' wx:if="{{typeCur==1}}">
+          <image class='team' src='../../imgs/coDonate-team-cur.png'></image>
+        </view>
+        <image wx:else class='team' src='../../imgs/coDonate-team.png'></image>
+        <text>团队发起</text>
+      </view>
+    </view>
+    <input wx:if="{{typeCur==1}}" name="teamName" placeholder='请输入团队名称' placeholder-style='color:#ccc;display:none'></input>
+  </view>
+  <!-- form -->
+  
+  <view class='form-wrap'>
+    <view class='item'>
+      <text class='label'>筹款目标</text>
+      <input placeholder='请输入筹款目标' type='number' placeholder-style='color:#ccc' name="totalMoney"></input>
+    </view>
+    <view class='item'>
+      <text class='label'>截止日期</text>
+      <picker mode="date" bindchange="selEndDate">
+        <view wx:if="{{endDate}}" class='pickerVal'>{{endDate}}</view>
+        <input wx:else class='pickerVal'>请选择截止日期</input>
+      </picker>
+    </view>
+    <view class='item'>
+      <text class='label'>设置最低起捐金额</text>
+      <view class='choose-item'>
+        <text class='item {{limitMoney==0?"item-cur":""}}' data-index="0" bindtap='selLimitMoney'>设置</text>
+        <text class='item {{limitMoney==1?"item-cur":""}}' data-index="1" bindtap='selLimitMoney'>不设置</text>
+      </view>
+      <input placeholder='请输入最低起捐金额' type='number' placeholder-style='color:#ccc' name="miniMoney" wx:if="{{limitMoney == 0}}"></input>
+    </view>
+  </view>
+  <!-- 一起捐 -->
+  <view class='form-wrap'>
+     <view class='item'>
+      <text class='label'>一起捐描述</text>
+      <textarea name="remarks" placeholder='请输入描述' auto-height placeholder-style='color:#ccc'></textarea>
+    </view>
+  </view>
+  <!-- button -->
+  <button form-type='submit' class='btn'>下一步</button>
+  </form>
+</view>

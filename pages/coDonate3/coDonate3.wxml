@@ -1,0 +1,70 @@
+<view class="page">
+  <view class='bg'>
+    <image src='../../imgs/co-donate2-bg.jpg'></image>
+  </view>
+  <!-- invite info -->
+  <view class='invite-info'>
+    <view class='avatar'>
+      <image src='{{userInfo.HeadImgURL}}'></image>
+    </view>
+    <text class='title'>发起：{{project.TeamName}}</text>
+    <text class='article'>{{project.Detail}}</text>
+  </view>
+  <!-- progress -->
+  <view class='progress'>
+    <view class='section'>
+      <text class='s'>已筹{{project.DonationMoney}}元</text>/目标{{project.TotalAmount}}元</view>
+    <view class='section'>
+      <text class='s'>{{project.EndTime}}</text>前截止</view>
+  </view>
+
+  <!-- 求助者信息 -->
+  <view class='helper-info'>
+    <view class='thumb'>
+      <image src='{{domainImage}}{{project.PFTitleImgUrl}}'></image>
+    </view>
+    <view class='detail'>
+      <text class='title'>{{project.PFName}}</text>
+      <view class='con'>
+        <text class="s-d">{{project.PFTeamName}}</text>
+      </view>
+      <view class='con'>善款总目标
+        <text class="s">{{project.PFTotalAmount}}元</text>
+      </view>
+      <view class='con'>已筹款
+        <text class="s">{{project.PFDonationAmount}}元</text>
+        <text class='s ml-30'>{{project.PFDonationCount}}</text>人献爱心</view>
+    </view>
+  </view>
+
+  <!-- 完成编辑后 展示当前项目参与人数 -->
+  <view class='join-wrap'>
+    <image src='../../imgs/coDonate-team.png'></image>
+    <text>{{project.DonationCount}}位好友参与</text>
+  </view>
+  <view class='con-record'>
+    <view class='record-item' wx:for="{{recordList}}" wx:key="{{index}}">
+      <view class='avatar'>
+        <image src='{{item.HeadImg}}'></image>
+      </view>
+      <view class='info'>
+        <view class='user'>
+          <text class='name'>{{item.NickName}}</text>
+           <navigator url = '/pages/certificate/certificate?id={{item.Id}}&pfid={{item.PFID}}'>
+                  <text class='tag'>【捐赠证书】</text>
+                </navigator>
+        </view>
+        <text class='time'>{{item.DonDate}}</text>
+        <text class='post'>{{item.Message}}</text>
+        <view class='donate'>支持
+          <text>￥{{item.DonMoney}}</text>
+        </view>
+      </view>
+  </view>
+</view>
+  <!-- 完成编辑后 按钮文字功能变化 -->
+  <view class='btns'>
+    <button open-type='share'>邀朋友参与</button>
+    <text class='ok'  data-id = '{{project.Id}}' data-pfid = '{{project.PFID}}' bindtap="join">我要参与</text>
+  </view>
+</view>

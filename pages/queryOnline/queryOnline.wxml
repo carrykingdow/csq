@@ -1,0 +1,42 @@
+<view class="page">
+  <view class='bg'>
+    <image src='../../imgs/queryOnline-bg.png'></image>
+  </view>
+  <view class='query-wrap'>
+    <view class='query-nav'>
+      <text class='item {{queryIndex==0?"item-cur":""}}' data-index="0" bindtap='selQuery'>公益历程</text>
+      <text class='item {{queryIndex==1?"item-cur":""}}' data-index="1" bindtap='selQuery'>专项基金</text>
+    </view>
+    <!-- query item -->
+    <view wx:if="{{queryIndex==0}}">
+      <form bindsubmit='query'>
+        <view class='query-item'>
+          <input placeholder='请输入姓名' name="nickname" placeholder-style='color:#ccc;'></input>
+        </view>
+        <view class='query-item'>
+          <input placeholder='请获取手机号码' disabled='{{!showCode}}' name="mobile" bindinput='mobileInput' value='{{mobile}}' placeholder-style='color:#ccc;'></input>
+          <button class="btn" plain bindgetphonenumber="getMobile" open-type="getPhoneNumber" wx:if="{{!showCode}}">获取手机号</button>
+        </view>
+        <view class='query-item' wx:if="{{showCode}}">
+          <input placeholder='请输入短信验证码' name="code" placeholder-style='color:#ccc;'></input>
+          <button class='btn' plain bindtap='sendSms'><block wx-if="{{clockNum < 61}}">{{clockNum}}</block>{{clockTxt}}</button>
+        </view>
+        <!-- query btn -->
+        <!-- 公益历程按钮 -->
+        <button form-type='submit' class="query-btn">确认</button>
+      </form>
+    </view>
+
+    <view wx:if="{{queryIndex==1}}">
+      <form bindsubmit='queryFound'>
+      <view class='query-item'>
+        <input name="Title" placeholder='请输入查询关键字，如编号名称' placeholder-style='color:#ccc;'></input>
+      </view>
+      <!-- 专项基金按钮 -->
+      <button form-type='submit' class='query-btn'>确认</button>
+      </form>
+    </view>
+  </view>
+
+
+</view>

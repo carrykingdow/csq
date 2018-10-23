@@ -1,0 +1,22 @@
+<view class="page">
+  <view class='donate-list'>
+    <view class='list title'>
+      <text class='cell cell1'>捐款人</text>
+      <text class=' cell cell2'>捐赠金额</text>
+      <text class='cell cell3'>捐赠时间</text>
+    </view>
+    <view class='list con'>
+      <text class='cell cell1'>黄晓明</text>
+      <text class='cell cell2'>￥1230</text>
+      <text class='cell cell3'>2018-05-23  12:30</text>
+    </view>
+     <view class='list con'>
+      <text class='cell cell1'>jack chen</text>
+      <text class='cell cell2'>￥30</text>
+      <text class='cell cell3'>2018-05-23 12:30</text>
+    </view>
+
+
+  </view>
+
+</view>

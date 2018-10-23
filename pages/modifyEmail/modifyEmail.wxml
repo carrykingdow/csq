@@ -1,0 +1,10 @@
+<!--pages/modifyEmail/modifyEmail.wxml-->
+<form bindsubmit='saveEmail'>
+  <view class='query-wrap'>
+    <view class='query-item'>
+      <input placeholder='邮箱' name="email" value='{{email}}' placeholder-style='color:#ccc;'></input>
+    </view>
+
+    <button form-type='submit' class="query-btn">保存</button>
+  </view>
+</form>

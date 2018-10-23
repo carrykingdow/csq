@@ -1,0 +1,33 @@
+<view class="page">
+  <view class='nav'>
+    <view class='nav-item'>
+      <text class='num'>{{LaunchCount}}次</text>
+      <text class='title'>发起一起捐</text> 
+    </view>
+    <view class='nav-item'>
+      <text class='num'>{{DonationCount}}位</text>
+      <text class='title'>小伙伴参与</text> 
+    </view>
+    <view class='nav-item'>
+      <text class='num'>{{DonationMoney}}元</text>
+      <text class='title'>共募善款</text> 
+    </view>
+  </view>
+  <!-- 捐赠记录 -->
+  <view class='donate-list'>
+    <navigator class='list' url='/pages/coDonate3/coDonate3?id={{item.Id}}' wx:for="{{list}}" wx:key="{{index}}">
+      <image class='thumb' src='{{domainImage}}{{item.PFTitleImgUrl}}'></image>
+      <view class='info'>
+        <text class='title'>{{item.PFName}}</text>
+        <view class='con'>
+          <text class='label'>参与人数</text>
+          <text class='val'>{{item.DonationCount}}次</text>
+        </view>
+        <view class='con'>
+          <text class='label'>共募集</text>
+          <text class='val'>{{item.DonationMoney}}元</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

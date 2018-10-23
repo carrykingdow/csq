@@ -1,0 +1,90 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.list {
+  margin-top: 20rpx;
+}
+
+.cell {
+  height: 134rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  background-color: #fff;
+  padding-left: 34rpx;
+  padding-right: 36rpx;
+  display: flex;
+}
+
+.cell:last-child {
+  border-bottom: none;
+}
+
+.cell .info {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+  margin-right: auto;
+}
+
+.cell .top {
+  display: flex;
+  align-items: center;
+}
+
+.cell .top .name {
+  font-size: 28rpx;
+  color: #393939;
+}
+
+.cell .top .tel {
+  font-size: 24rpx;
+  color: #999;
+  margin-left: 20rpx;
+}
+
+.cell .bottom {
+  display: flex;
+  align-items: center;
+  margin-top: 10rpx;
+}
+
+.cell .bottom .address {
+  font-size: 24rpx;
+  color: #393939;
+}
+
+.cell .bottom .icon {
+  width: 21rpx;
+  height: 29rpx;
+  margin-right: 13rpx;
+}
+
+.cell .edit {
+  font-size: 24rpx;
+  color: #999;
+  width: 50rpx;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.bottom-btn {
+  height: 96rpx;
+  margin-top: 20rpx;
+  position: relative;
+}
+
+.btn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 96rpx;
+  display: flex;
+  background-color: #f8592d;
+  font-size: 36rpx;
+  color: #fff;
+  justify-content: center;
+  line-height: 96rpx;
+}

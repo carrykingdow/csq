@@ -1,0 +1,30 @@
+<view class="page">
+  <view class='banner'>
+    <image src='../../imgs/custom-made-bg.png'></image>
+  </view>
+  <view class='introduce'>
+    <image src='../../imgs/introduce-edit.png'></image>
+    <text>摆脱繁杂的项目挑选，根据自己的意愿及企业的特点设计项目，联合诸多专业公益机构打造与众不同的冠名基金或项目</text>
+  </view>
+  <!-- form -->
+  <form bindsubmit='saveMade'>
+    <view class='form-wrap'>
+      <view class='item'>
+        <text class='label'>姓名</text>
+        <input placeholder='请输入姓名' name="userName" placeholder-style='color:#ccc'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>联系方式</text>
+        <input placeholder='请输入联系方式' name="userPhone" placeholder-style='color:#ccc'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>需求描述</text>
+        <textarea auto-height maxlength="-1" name="description" placeholder='请输入需求描述' placeholder-style='color:#ccc'></textarea>
+      </view>
+    </view>
+    <!-- commit btn -->
+    <view class='commit-btn'>
+      <button form-type='submit'>提交</button>
+    </view>
+  </form>
+</view>

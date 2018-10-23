@@ -1,0 +1,72 @@
+<view class="page">
+  <view class='banner'>
+    <image src='../../imgs/donate-record-bg.png'></image>
+    <view class='greetings'>
+      <text class='date'>{{Greetings}}</text>
+      <text class='con'>感谢您关注丛善桥</text>
+    </view> 
+  </view>
+  <!-- user info -->
+  <view class='user-info'>
+    <image class='avatar' src='{{userInfo.HeadImgURL}}'></image>
+    <text class='user-name'>{{userInfo.NickName}}</text>
+    <view class='info'>
+      <view class='item'>
+        <text class='num'>{{TotalAmount}}</text>
+        <text class='title'>捐赠总额(元)</text>
+      </view>
+      <view class='item'>
+        <text class='num'>{{TotalCount}}</text>
+        <text class='title'>爱心次数(笔)</text>
+      </view>
+    </view>
+    <!-- btn -->
+    <view class='donate-btn' bindtap='donateMoney'>随手捐</view>
+  </view>
+  <!-- 捐赠记录 -->
+  <view class='record-list'>
+    <view class='list-title'>随手捐明细</view>
+    <view class='list-con'>
+     <view class='list' wx:for="{{list}}" wx:key="{{index}}">
+        <view class='money'>{{item.Title}}￥{{item.DonationMoney}}</view>
+        <view class='date'>{{item.DonationTime}}</view>
+     </view>
+     <view class='footer' hidden='{{noMore}}'>--无更多数据--</view>
+    </view>
+  </view>
+    <!-- 遮罩 -->
+  <view class='layer-wrap' wx:if='{{showLay}}'>
+    <view class='layer' bindtap='closeLayer'></view>
+    <view class='sel-box'>
+      <form bindsubmit='donation'>
+      <!-- 选择金额 -->
+      <view class='sel-panel'>
+        <view class='hd'>
+          <text>请选择捐款金额</text>
+        </view>
+        <view class='bd'>
+          <view class='item {{itemIndex == 0?"checked":""}}' data-id='0' bindtap='tabItem'>
+            20元
+          </view>
+          <view class='item {{itemIndex == 1?"checked":""}}' data-id='1' bindtap='tabItem'>
+            50元
+          </view>
+          <view class='item {{itemIndex == 2?"checked":""}}' data-id='2' bindtap='tabItem'>
+            100元
+          </view>
+          <view class='item {{itemIndex == 3?"checked":""}}' data-id='3' bindtap='tabItem'>
+            其他金额
+          </view>
+        </view>
+        <view class='post' wx:if="{{itemIndex == 3}}">
+          <input name="DonMoney" placeholder="请填写金额" type='number'  placeholder-style="font-size:25rpx;color:#999;" />
+        </view>
+      </view>
+      <!-- 捐款按钮 -->
+      <view class='donate-btn'>
+        <button form-type='submit' class='agree'>同意协议并捐款</button>
+      </view>
+      </form>
+    </view>
+  </view>
+</view>

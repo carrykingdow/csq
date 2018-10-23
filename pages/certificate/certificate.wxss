@@ -1,0 +1,5 @@
+/* pages/certificate/certificate.wxss */
+image{
+  width: 95%;
+  height:auto
+}

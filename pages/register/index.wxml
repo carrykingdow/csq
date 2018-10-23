@@ -1,0 +1,25 @@
+<!--pages/register/index.wxml-->
+
+<view class=''>
+  <form bindsubmit='register'>
+    <view class='query-wrap'>
+      <view class='header'>
+        <image src='{{userInfo.avatarUrl}}'></image>
+      </view>
+
+      <view class='query-item'>
+        <input placeholder='昵称' name="nickname" value='{{userInfo.nickName}}' placeholder-style='color:#ccc;'></input>
+      </view>
+      <view class='query-item'>
+        <input placeholder='点击右边按钮获取手机号码' name="mobile" disabled='{{!showCode}}' bindinput='mobileInput' value='{{mobile}}' placeholder-style='color:#ccc;'></input>
+        <button class="btn" plain bindgetphonenumber="getMobile" open-type="getPhoneNumber" wx:if="{{!showCode}}">获取手机号</button>
+      </view>
+      <view class='query-item' wx:if="{{showCode}}">
+        <input placeholder='请输入短信验证码' name="code" placeholder-style='color:#ccc;'></input>
+        <button class='btn' plain bindtap='sendSms'>
+          <block wx-if="{{clockNum < 61}}">{{clockNum}}</block>{{clockTxt}}</button>
+      </view>
+      <button form-type='submit' class="query-btn">注册</button>
+    </view>
+  </form>
+</view>

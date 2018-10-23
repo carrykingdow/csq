@@ -1,0 +1,51 @@
+<view class="page">
+  <form bindsubmit='applyInvoice'>
+    <view class='section-wrap'>
+      <view class='section-title'>发票信息</view>
+      <!-- form -->
+      <view class='form-wrap'>
+        <view class='item'>
+          <text class='label'>发票抬头</text>
+          <input name="Invoicetitle" placeholder='请填写发票抬头' placeholder-style='color:#ccc'></input>
+        </view>
+        <view class='item default'>
+          <view class='default-val'>
+            <text class='name'>开票金额</text>
+            <text class='val'>￥{{Invoicemoney}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view class='section-wrap'>
+      <view class='section-title'>快递信息</view>
+      <!-- form -->
+      <view class='form-wrap'>
+        <view class='item'>
+          <text class='label'>配送方式</text>
+          <view class='choose-item'>
+            <text class='item {{deliveryIndex==0?"item-cur":""}}' data-index="0" bindtap='selWay'>自提</text>
+            <text class='item sec-item {{deliveryIndex==1?"item-cur":""}}' data-index="1" bindtap='selWay'>挂号信</text>
+            <text class='item {{deliveryIndex==2?"item-cur":""}}' data-index="2" bindtap='selWay'>顺丰到付</text>
+          </view>
+          <input wx:if='{{deliveryIndex==0}}' value='自提地点：浙江杭州西湖对面' type='number' placeholder-style='color:#ccc'></input>
+          <input wx:if='{{deliveryIndex==1}}' value='捐赠金额大于等于200元，我们将免费邮政挂号信给您寄出' type='number' placeholder-style='color:#ccc'></input>
+          <input wx:if='{{deliveryIndex==2}}' value='捐赠金额大于等于200元，我们将免费邮政挂号信给您寄出' type='number' placeholder-style='color:#ccc'></input>
+          <view class='addAddress' wx:if='{{deliveryIndex!=0 && !address}}' bindtap='selectAddress'>请添加收货地址</view>
+          <view class='getAddress' wx:if='{{deliveryIndex!=0 && address}}' bindtap='selectAddress'>
+            <view class='top'>
+              <view class='name'>收件人：{{address.UserName}}</view>
+              <view class='tel'>{{address.UserPhone}}</view>
+            </view>
+            <view class='address-detail'>
+              <image class="icon" src='../../imgs/invoice-address.png'></image> 收货地址：{{address.Address}}</view>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <view>
+      <button form-type='submit' class='query-btn'>提交</button>
+    </view>
+  </form>
+</view>

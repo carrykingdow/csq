@@ -1,0 +1,84 @@
+
+.bg{
+  width: 100%;
+  height: 274rpx;
+  position: relative;
+}
+.bg image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.bg text{
+  color: #fff;
+  font-size: 44rpx;
+  top: 97rpx;
+  left: 48rpx;
+  position: absolute;
+}
+.query-wrap{
+
+  background-color: #fff;
+
+}
+.query-wrap .query-nav{
+  width: 394rpx;
+  margin:  0 auto;
+  display: flex;
+   padding-top: 55rpx;
+   padding-bottom: 40rpx; 
+  justify-content: space-between;
+}
+.query-wrap .query-nav .item{
+  font-size: 28rpx;
+  line-height: 34rpx;
+  color: #888;
+  padding-bottom: 25rpx;
+
+}
+.query-wrap .query-nav .item-cur{
+  border-bottom: 2rpx solid #f8592d;
+  color: #f8592d;
+}
+.query-wrap .query-item{
+  margin:  0 30rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  overflow: hidden;
+  border: 2rpx solid #e0e0e0;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center
+}
+.query-wrap .query-item input{
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #393939;
+  padding: 0 30rpx;
+  flex: 1
+}
+.query-wrap .query-btn{
+  width: 680rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  border-radius:45rpx;
+  border: none;
+  background-color: #f8592d;
+  color: #fff; 
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+
+button[plain]{
+  font-size: 32rpx;
+  border: none;
+  border-left: 1rpx solid #eee;
+  color: #ccc;
+  padding: 0;
+  padding-left: 10rpx;
+  margin-right: 30rpx;
+  border-radius: 0
+}

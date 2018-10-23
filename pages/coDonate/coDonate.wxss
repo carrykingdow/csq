@@ -1,0 +1,225 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.info-wrap {
+  padding: 30rpx 35rpx;
+  display: flex;
+  background-color: #fff;
+}
+
+.info-wrap .thumb {
+  width: 240rpx;
+  height: 180rpx;
+  border-radius: 2rpx;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.info-wrap .thumb image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.info-wrap .info {
+  margin-left: 21rpx;
+  max-width: 414rpx;
+}
+
+.info-wrap .info .title {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #333;
+  margin-top: 10rpx;
+}
+
+.info-wrap .info .detail {
+  font-size: 22rpx;
+  color: #b6b6b6;
+  line-height: 30rpx;
+  padding-top: 19rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+}
+
+.info-wrap .info .progress {
+  display: flex;
+  margin-top: 30rpx;
+  justify-content: space-between;
+}
+
+.info-wrap .info .progress .con {
+  font-size: 24rpx;
+  color: #888;
+}
+
+.info-wrap .info .progress .s {
+  color: #f8592d;
+}
+
+.start-type {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 20rpx 30rpx;
+}
+
+.start-type .title {
+  font-size: 30rpx;
+  color: #393939;
+  margin-bottom: 20rpx;
+  font-weight: bold
+}
+
+.start-type .sel-item {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25rpx;
+}
+
+.start-type .sel-item .item {
+  display: flex;
+  width: 325rpx;
+  height: 120rpx;
+  align-items: center;
+  justify-content: center;
+  border: 2rpx solid #eee;
+}
+
+.start-type .sel-item .item .img-wrap {
+  width: 74rpx;
+  height: 74rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #ffecdc;
+  border-radius: 50%;
+}
+
+.start-type .sel-item .item .single {
+  width: 23rpx;
+  height: 33rpx;
+}
+
+.start-type .sel-item .item .team {
+  width: 34rpx;
+  height: 32rpx;
+}
+
+.start-type .sel-item .item text {
+  font-size: 24rpx;
+  color: #888;
+  margin-left: 44rpx;
+}
+
+.start-type .sel-item .item.item-cur {
+  background-color: #fff5ed;
+  border-color: #f9b480;
+}
+
+.start-type .sel-item .item.item-cur text {
+  color: #f8592d;
+  margin-left: 24rpx;
+}
+
+.start-type input {
+  font-size: 28rpx;
+  color: #393939;
+  margin-top: 20rpx;
+}
+
+.form-wrap {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.form-wrap > .item {
+  padding: 30rpx 30rpx 15rpx 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+  position: relative;
+}
+
+.form-wrap > .item .label {
+  font-size: 28rpx;
+  color: #393939;
+  display: block;
+  margin-bottom: 15rpx;
+  font-weight: bold
+}
+
+.form-wrap > .item input {
+  font-size: 28rpx;
+  color: #393939;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: block;
+}
+
+.form-wrap >.item picker {
+  font-size: 28rpx;
+  color: #393939;
+  width: 100%;
+  height: 40rpx;
+  line-height: 40rpx;
+  display: block;
+}
+
+.form-wrap > .item textarea {
+  font-size: 28rpx;
+  color: #393939;
+  width: 100%;
+  padding-bottom: 100rpx;
+  height: 100%;
+}
+
+.form-wrap > .item .choose-item {
+  display: flex;
+  position: absolute;
+  width: 200rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  color: #333;
+  border: solid 2rpx #e0e0e0;
+  box-sizing: border-box;
+  top: 30rpx;
+  right: 30rpx;
+}
+input::-webkit-input-placeholder
+{
+  color: #ccc
+}
+.form-wrap > .item .choose-item .item {
+  flex: 1;
+  line-height: 44rpx;
+  text-align: center;
+}
+
+.form-wrap > .item .choose-item .item-cur {
+  color: #333;
+border: 2rpx solid #333
+}
+
+.btn {
+  height: 96rpx;
+  background-color: #f8592d;
+  font-size: 32rpx;
+  color: #fff;
+  text-align: center;
+  line-height: 96rpx;
+  border-radius: 0;
+  position:fixed;
+  width:100%;
+  bottom:0px;
+}
+
+button::after {
+  border: none;
+}
+

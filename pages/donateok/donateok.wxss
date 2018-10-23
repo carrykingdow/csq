@@ -1,0 +1,158 @@
+page {
+  background-color: #efefef;
+  height: 100%;
+}
+
+.baseInfo {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  padding: 60rpx 0;
+  margin-top: 20rpx;
+}
+
+.baseInfo .avatar {
+  width: 121rpx;
+  height: 138rpx;
+}
+
+.baseInfo .avatar image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.baseInfo .thanks text {
+  font-size: 28rpx;
+  color: #393939;
+}
+
+.baseInfo .title text {
+  font-size: 32rpx;
+  color: #333;
+}
+
+.action-section {
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+
+.action-section .item {
+  display: flex;
+  padding: 30rpx 0;
+  margin-left: 35rpx;
+  align-items: center;
+
+}
+
+.action-section .item.hasBorder {
+  border-bottom: 1rpx solid #efefef;
+}
+
+.action-section .item .icon {
+  width: 60rpx;
+  height: 60rpx;
+  flex-shrink: 0;
+}
+
+.action-section .item .icon image {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.action-section .item .title {
+  margin-left: 10rpx;
+  font-size: 28rpx;
+  color: #666;
+  max-width: 520rpx;
+  
+}
+
+.action-section .item .title text {
+  display: flex;
+}
+
+.action-section .item .title .sub {
+  color: #999;
+  font-size: 22rpx;
+ 
+}
+.action-section .item .apply-btn {
+  position: absolute;
+  right: 32rpx;
+}
+.action-section .item .apply-btn text{
+  font-size: 24rpx;
+  color: #fff;
+  width: 90rpx;
+  height: 44rpx;
+  background-color: #f8592d;
+  border-radius: 45rpx;
+  display: block;
+  text-align: center;
+  line-height: 44rpx;
+}
+.action-section .item .apply-btn text.disabled{
+  color: #fff;
+  background-color: #cccccc;
+}
+.list-wrap {
+  background-color: #fff;
+  margin-top: 20rpx;
+  padding: 35rpx 22rpx;
+}
+
+.list-wrap .flag text {
+  font-size: 32rpx;
+  color: #393939;
+  line-height: 48rpx;
+}
+
+.list-wrap .list {
+ 
+  display: flex;
+  padding: 20rpx 0;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.list-wrap .list:last-child {
+  border: none;
+}
+
+.list-wrap .list .thumb {
+  display: flex;
+  align-items: center;
+    width: 200rpx;
+  height: 150rpx;
+  flex-shrink: 0;
+}
+
+.list-wrap .list .thumb image {
+  width: 100%;
+  height: 100%;
+    display: block;
+}
+
+.list-wrap .list .info {
+  font-size: 32rpx;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20rpx;
+  justify-content: center;
+}
+.list-wrap .list .info .name{
+  font-size: 28rpx;
+  color: #393939;
+  line-height: 30rpx;
+}
+.list-wrap .list .info .detail {
+  font-size: 22rpx;
+  color: #b6b6b6;
+  max-height: 60rpx;
+  overflow: hidden;
+    line-height: 30rpx;
+    padding-top: 16rpx;
+}

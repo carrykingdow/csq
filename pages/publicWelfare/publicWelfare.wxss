@@ -1,0 +1,188 @@
+page{
+  background-color: #f5f5f5;
+}
+.banner{
+  background-color: #ff4400;
+  position: relative;
+  height: 300rpx;
+}
+.banner .greetings{
+  position: absolute;
+  top: 28rpx;
+  left: 64rpx;
+  width: 100%;
+  color: #fff;
+}
+
+.banner .greetings .date {
+  font-size: 40rpx;
+  display: block;
+  font-weight: bold;
+  margin-bottom: 20rpx；
+}
+
+.banner .greetings .con {
+  font-size: 36rpx;
+  display: block;
+  font-weight: bold;
+}
+
+.user-info{
+  position: relative;
+  background-color: #fff;
+  height: 275rpx;
+}
+.user-info .avatar{
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  top: -70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+}
+.user-info .info{
+  display: flex;
+  padding-top: 152rpx;
+  justify-content: space-around;
+}
+.user-info .info .item text{
+  display: block;
+  min-width: 155rpx;
+  text-align: center;
+} 
+.user-info .user-name {
+  position: absolute;
+  font-size: 34rpx;
+  color: #333;
+  left: 50%;
+  top: 90rpx;
+  transform: translate(-50%, 0);
+  display: block;
+  line-height: 34rpx;
+}
+.user-info .info .item .title{
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+}
+.user-info .info .item .num{
+  font-size: 34rpx;
+  color: #393939;
+}
+
+.donate-record {
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding: 30rpx 0;
+}
+.donate-record .center{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.donate-record  .title{
+  font-size: 30rpx;
+  color: #343434;
+
+  display: block;
+}
+.donate-record .img-wrap{
+  width: 179rpx;
+  height: 179rpx;
+  background-color: #f5f5f5;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 45rpx;
+}
+.donate-record .img-wrap image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.donate-record .img-wrap text{
+  position: absolute;
+  font-size: 30rpx;
+  color: #343434;
+}
+
+.donate-record .date{
+  font-size: 24rpx;
+  color: #343434;
+  margin-top: 20rpx;
+}
+.donate-record .more{
+  width: 200rpx;
+  height: 48rpx;
+  font-size: 24rpx;
+  color: #343434;
+  	border-radius: 24rpx;
+	border: solid 2rpx #e0e0e0;
+  text-align: center;
+  line-height: 48rpx;
+  margin-top: 30rpx;
+}
+
+.donate-list {
+  background-color: #fff;
+  border-top: 1rpx solid #f5f5f5;
+}
+
+.donate-list .list {
+  padding: 30rpx;
+  display: flex;
+  border-bottom: 1rpx solid #f5f5f5;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAWCAYAAAAb+hYkAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyhpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuNi1jMDE0IDc5LjE1Njc5NywgMjAxNC8wOC8yMC0wOTo1MzowMiAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENDIDIwMTQgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6QTY0NjA2NENCMDFGMTFFOEFFQTVEODUwRjJGMjlFMzAiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6QTY0NjA2NERCMDFGMTFFOEFFQTVEODUwRjJGMjlFMzAiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDpBNjQ2MDY0QUIwMUYxMUU4QUVBNUQ4NTBGMkYyOUUzMCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDpBNjQ2MDY0QkIwMUYxMUU4QUVBNUQ4NTBGMkYyOUUzMCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PuMxqpAAAAD5SURBVHjajJRLCsIwFEXT0Jkr8DP1twt1A85diAO1Vm2r4KJ07gIUtYWC3wU41xt4hUdIEy8c2pQeXvqS1MvzPBBCjMERjEAmHPEgfXCt0PgO+iC1SRJs2bgB9qDpklZgbRBbNkllCmL2vA52ZaJk9wFV5aKq2LZJKqEm1kyiNFQPiSJVEjs2SVA1k9gt1snW3RmI2PgNBi5JZQISNk6lcEd/5+uSAsP0hjZprrX/Rfvy5JcIC617hXAua/lSE55cUNErRdTmIg/VYnDhL3Eppo1rFbiU0HoIdhiVcDV9sE/z1wXr6dWP+42EzLXaG6DEA+j982P5CTAAQphDe1m8pbYAAAAASUVORK5CYII=) no-repeat center right 30rpx/13rpx 22rpx;
+}
+
+.donate-list .list .thumb {
+  width: 200rpx;
+  height: 150rpx;
+  display: block;
+  background-color: #f5f5f5;
+}
+
+.donate-list .list .info {
+  margin-left: 22rpx;
+  max-width: 415rpx;
+}
+
+.donate-list .list .info .title {
+  font-size: 28rpx;
+  color: #393939;
+  display: block;
+  line-height: 28rpx;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-bottom: 35rpx;
+  margin-top: 13rpx;
+}
+
+.donate-list .list .info .con {
+  font-size: 24rpx;
+  display: flex;
+  margin-bottom: 15rpx;
+}
+
+.donate-list .list .info .con:last-child {
+  margin-bottom: 0;
+}
+
+.donate-list .list .info .con text {
+  line-height: 30rpx;
+  display: block;
+}
+
+.donate-list .list .info .con .label {
+  color: #888;
+}
+
+.donate-list .list .info .con .val {
+  color: #393939;
+  line-height: 30rpx;
+}

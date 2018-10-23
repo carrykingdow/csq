@@ -1,0 +1,181 @@
+<wxs module="filters" src="../../utils/addmul.wxs"></wxs>
+<import src="../../wxParse/wxParse.wxml" />
+<view class="page">
+  <!-- banner+进度 -->
+  <view class='banner'>
+    <view class='image'>
+      <image src='{{domainImage}}{{project.TitleImgURL}}' mode="aspectFill"></image>
+      <text class='flag'>{{project.PfStatus}}</text>
+    </view>
+
+  </view>
+
+  <view class='contain-wrap'>
+    <view class='info'>
+      <text class='title'>{{project.Title}}</text>
+      <view class='tags'>
+        <text class='tag'>医疗救助</text>
+      </view>
+      <!-- 捐献进度 -->
+      <view class='progess-wrap'>
+        <!-- 进度条 -->
+        <view class='progress-bar'>
+          <view class='stroke' style='width:{{filters.toInt(project.CompletionProgress * 100)}}%'>
+            <view wx:if="{{project.CompletionProgress>0}}" class='dot'>{{filters.toInt(project.CompletionProgress * 100)}}%</view>
+          </view>
+        </view>
+        <!-- 捐献明细 -->
+        <view class='progress-items'>
+          <view class='item'>
+            <text class='num'>{{project.TotalAmount}}</text>
+            <text class='name'>目标金额</text>
+          </view>
+          <view class='item'>
+            <text class='num'>{{project.DonationAmount}}</text>
+            <text class='name'>已筹金额</text>
+          </view>
+          <view class='item'>
+            <text class='num'>{{project.DonorsNum}}</text>
+            <text class='name'>捐款人次</text>
+          </view>
+        </view>
+        <!-- 捐献机构 -->
+        <view class='org'>
+          <text class='default'>善款接受:</text>
+          <text class='unit'>{{project.TeamName}}</text>
+          <image class='cert' src='../../imgs/cert.png'></image>
+        </view>
+      </view>
+    </view>
+    <!-- 分类详情 -->
+    <view class='category-items'>
+      <!-- 切换按钮 -->
+      <view class='tab-nav'>
+        <view class='item {{showTabCon==index?"s-cur":""}}' bindtap='tabNav' wx:for="{{tabNav}}" wx:key="index" data-index="{{index}}">{{item}}</view>
+      </view>
+      <!-- 切换内容 -->
+      <view class='tab-con'>
+        <!-- 项目详情 -->
+        <view class='con-detail' wx:if="{{showTabCon==0}}">
+          <template is="wxParse" data="{{wxParseData:article.nodes}}" />
+        </view>
+        <!-- 项目动态 -->
+        <view class='con-act' wx:if="{{showTabCon==1}}">
+          <!-- 流程进度 -->
+          <view class='flow-item' wx:for="{{dynamic}}" wx:key="{{index}}">
+            <view class='flow-icon'>
+              <image src='../../imgs/timeline-icon.png'></image>
+            </view>
+            <view class='flow-con'>
+              <text class='flow-status'>更改筹款截止日期</text>
+              <text class='flow-time'>2108-31-12 12:98</text>
+              <text class='flow-info'>截止日期更改为xxxxxxxx</text>
+            </view>
+          </view>
+        </view>
+
+        <!-- 捐赠记录 -->
+
+        <view class='con-record' wx:if="{{showTabCon==2}}">
+          <view class='record-item' wx:for="{{recordList}}" wx:key="{{index}}">
+            <view class='avatar'>
+              <image src='{{item.HeadImg}}'></image>
+            </view>
+            <view class='info'>
+              <view class='user'>
+                <text class='name'>{{item.NickName}}</text>
+                <navigator url = '/pages/certificate/certificate?id={{item.Id}}&pfid={{item.PFID}}'>
+                  <text class='tag'>【捐赠证书】</text>
+                </navigator>
+              </view>
+              <text class='time'>{{item.DonDate}}</text>
+              <text class='post'>{{item.Message}}</text>
+              <view class='donate'>支持
+                <text>￥{{item.DonMoney}}</text>
+              </view>
+            </view>
+
+          </view>
+
+        </view>
+
+      </view>
+
+    </view>
+
+  </view>
+  <!-- 底部捐款按钮 -->
+  <view class='donate-btn'>
+    <view class='btns'>
+      <view class='btn btn-l'>
+        <view class='item' bindtap='collection'>
+          <image src='../../imgs/project-detail-collect.png'></image>
+          <text>收藏</text>
+        </view>
+         <button class='item' plain open-type='contact'>
+          <image src='../../imgs/project-detail-custom.png'></image>
+          <text>客服</text>
+        </button>
+         <view class='item' bindtap='donate'>
+          <image src='../../imgs/project-detail-coDonate.png'></image>
+          <text>发起一起捐</text>
+        </view>
+      </view>
+      <view class='btn' bindtap="donateMoney">
+        <text class='s-cur {{project.PFStatus == 1?"":dis}}'>我要捐款</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 遮罩 -->
+  <view class='layer-wrap' wx:if='{{showLay}}'>
+    <view class='layer' bindtap='closeLayer'></view>
+    <form bindsubmit='donation'>
+    <view class='sel-box'>
+      <!-- 选择金额 -->
+      <view class='sel-panel'>
+        <view class='hd'>
+          <text>请选择捐款金额</text>
+        </view>
+        <view class='bd'>
+          <view class='item {{itemIndex == 0?"checked":""}}' data-id='0' bindtap='tabItem'>
+            20元
+          </view>
+          <view class='item {{itemIndex == 1?"checked":""}}' data-id='1' bindtap='tabItem'>
+            50元
+          </view>
+          <view class='item {{itemIndex == 2?"checked":""}}' data-id='2' bindtap='tabItem'>
+            100元
+          </view>
+          <view class='item {{itemIndex == 3?"checked":""}}' data-id='3' bindtap='tabItem'>
+            其他金额
+          </view>
+        </view>
+        <view class='post' wx:if="{{itemIndex == 3}}">
+          <input name="DonMoney" placeholder="请填写金额" type='number' placeholder-style="font-size:25rpx;color:#393939;" />
+        </view>
+
+        <!-- 鼓励一下 -->
+        <view class='post'>
+          <input auto-height placeholder="鼓励一下Ta吧" name="Message" placeholder-style="font-size:25rpx;color:#393939;" />
+        </view>
+      </view>
+      
+      <!-- 捐款按钮 -->
+      <view class='donate-btn'>
+        <button form-type='submit' class='agree'>同意协议并捐款</button>
+      </view>
+    </view>
+    </form>
+  </view>
+
+  <!-- 留言悬浮框 -->
+
+  <!--<view class='hover-msg' bindtap='toggleMsg'>
+    <image wx:if="{{!toggleHover}}" class='small' src='../../imgs/hover.png'></image>
+    <view wx:if="{{toggleHover}}" class='expand'>
+      <image src='../../imgs/hover-expand.png'></image>
+      <text>有问题请留言</text>
+    </view>
+  </view>-->
+</view>

@@ -1,0 +1,39 @@
+<view class="page">
+  <view class='panel'>
+    <navigator class='hd' url='/pages/projectDetail/projectDetail'>
+      <image class='thumb'></image>
+      <view class='info'>
+        <text class='title'>{{detail.Title}}</text>
+        <view class='con'>已筹
+          <text>797239423元</text>
+        </view>
+        <view class='con'>已有
+          <text>79423人</text>献爱心</view>
+      </view>
+    </navigator>
+    <view class='bd'>
+      <view class='progress'>
+        <text class='tag'>最新进展</text>
+        <text class='content'>未来工程师计划正式启动未来工程师计划正式启动未来工程师计划正式启动未来工程师计划正式启动未来工程师计划正式启动未来工程师计划正式启动</text>
+      </view>
+      <view class='more'>
+        <text class='brief'>2018年4月收集并整理完成甘肃省及云南省第二批共196名受资助学生的成绩单与明信片</text>
+        <text class='more-btn'>查看详情</text>
+      </view>
+    </view>
+  </view>
+  <!-- donate detail -->
+
+  <view class='donate-detail'>
+    <text class='title'>捐赠明细</text>
+    <view class='section'>
+      <view class='top'>
+        <text class='name'>关怀平困母亲</text>
+        <text class='money'>￥131</text>
+      </view>
+      <text class='date'>2018-09-21 12:21</text>
+    </view>
+  </view>
+
+
+</view>

@@ -1,0 +1,98 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.banner {
+  width: 100%;
+  height: 274rpx;
+  position: relative;
+}
+
+.banner image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.banner text {
+  color: #fff;
+  position: absolute;
+  left: 40rpx;
+  top: 82rpx;
+}
+
+.introduce {
+  display: flex;
+  align-items: center;
+  height: 115rpx;
+  background-color: #fff;
+  padding: 0 30rpx;
+}
+
+.introduce image {
+  width: 36rpx;
+  height: 34rpx;
+  display: block;
+  flex-shrink: 0;
+  margin-right: 14rpx;
+}
+
+.introduce text {
+  font-size: 22rpx;
+  color: #888;
+  line-height:34rpx;
+
+}
+
+.form-wrap {
+  margin-top: 20rpx;
+  background-color: #fff;
+}
+
+.form-wrap .item {
+  padding: 15rpx 30rpx;
+  border-bottom: 1rpx solid #f5f5f5;
+}
+
+.form-wrap .item .label {
+  font-size: 28rpx;
+  color: #393939;
+  margin-bottom: 15rpx;
+  font-weight: bold
+}
+
+.form-wrap .item input {
+  font-size: 28rpx;
+  color: #393939;
+  width: 100%;
+  margin-top: 20rpx
+}
+
+.form-wrap .item textarea {
+  font-size: 28rpx;
+  color: #393939;
+  width: 100%;
+  padding-bottom: 100rpx;
+  height: 100%;
+  margin-top: 20rpx;
+  min-height: 50rpx
+}
+
+.commit-btn {
+  width: 680rpx;
+  margin: 90rpx auto 0;
+  overflow: hidden;
+  border-radius: 45rpx;
+  background-color: #f8592d;
+}
+
+.commit-btn button {
+  border: none;
+  background: none;
+  color: #fff;
+  height: 90rpx;
+  line-height: 90rpx;
+}

@@ -1,0 +1,47 @@
+<view class="page">
+  <!-- banner 轮播 -->
+  <view class='banner'>
+    <swiper autoplay="true" indicator-dots circular indicator-color="#fff" indicator-active-color="#fc5677" style='height:{{height}}'>
+      <block wx:for="{{bannerList}}" wx:key="index">
+        <swiper-item>
+          <image src='{{domainImage}}{{item.TitleImgURL}}' data-id='{{item.Id}}' bindtap='projectDetail' class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 项目分类 -->
+  <view class='category'>
+    <!-- 分类nav -->
+    <scroll-view scroll-x class='nav-wrap'>
+
+        <view class='nav {{navIndex==index?"s-cur":""}}' wx:for='{{categoryList}}' wx:key='{{index}}' bindtap='selCategory' data-id='{{item.CategoryKey}}' data-index="{{index}}">
+          <text>{{item.CategoryValue}}</text>
+        </view>
+
+    </scroll-view>
+    <!-- 分类list -->
+    <view class='cate-list'>
+      <view class='list' wx:for="{{projectList}}" wx:key="{{index}}">
+        <navigator url="/pages/projectDetail/projectDetail?id={{item.Id}}" hover-class=''>
+          <view class='top'>
+            <view class='thumb'>
+              <image src='{{domainImage}}{{item.TitleImgURL}}' mode="aspectFill"></image>
+            </view>
+            <view class='info'>
+              <text class='title'>{{item.Title}}</text>
+              <text class='tag'>{{item.PLabel}}</text>
+              <text class='love'>已有<text class='special'>{{item.DonorsNum}}</text>人献爱心</text>
+            </view>
+          </view>
+          <view class='progress'>
+            <progress percent="{{item.CompletionProgress * 100}}" active activeColor='#f8592d' />
+          </view>
+        </navigator>
+      </view>
+
+      <view class='footer' hidden='{{noMore}}'>--无更多数据--</view>
+
+    </view>
+  </view>
+
+</view>

@@ -1,0 +1,242 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.banner {
+  position: relative;
+  height: 300rpx;
+}
+
+.banner image {
+  width: 100%;
+  position: relative;
+  height: 300rpx;
+}
+
+.banner .greetings {
+  position: absolute;
+  top: 28rpx;
+  left: 64rpx;
+  width: 100%;
+  color: #fff;
+}
+
+.banner .greetings .date {
+  font-size: 40rpx;
+  display: block;
+  margin-top: 20rpx;
+  font-weight: bold;
+  margin-bottom: 20rpx;
+}
+
+.banner .greetings .con {
+  font-size: 36rpx;
+  display: block;
+  font-weight: bold
+}
+
+.user-info {
+  position: relative;
+  background-color: #fff;
+  padding-bottom: 30rpx;
+}
+
+.user-info .avatar {
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 50%;
+  top: -70rpx;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%, 0);
+}
+
+.user-info .user-name {
+  position: absolute;
+  font-size: 34rpx;
+  color: #333;
+  left: 50%;
+  top: 90rpx;
+  transform: translate(-50%, 0);
+  display: block;
+  line-height: 34rpx;
+}
+
+.user-info .info {
+  display: flex;
+  padding-top: 152rpx;
+  justify-content: space-around;
+}
+
+.user-info .info .item text {
+  display: block;
+  min-width: 155rpx;
+  text-align: center;
+}
+
+.user-info .info .item .title {
+  font-size: 28rpx;
+  color: #999;
+  margin-bottom: 15rpx;
+}
+
+.user-info .info .item .num {
+  font-size: 34rpx;
+  color: #393939;
+  font-weight: bold;
+  margin-bottom: 10rpx;
+}
+
+.user-info .donate-btn {
+  width: 680rpx;
+  height: 90rpx;
+  border-radius: 45rpx;
+  background-color: #f8592d;
+  color: #fff;
+  font-size: 32rpx;
+  text-align: center;
+  line-height: 90rpx;
+  margin: 50rpx auto 0;
+}
+
+
+.record-list{
+  margin-top: 20rpx;
+  background-color: #fff;
+  padding-top: 32rpx;
+}
+.record-list .list-title{
+  font-size: 32rpx;
+  color: #393939;
+  border-left: 6rpx solid #f8592d;
+  height: 30rpx;
+  line-height: 30rpx;
+  padding:0 32rpx;
+}
+.record-list .list-con{
+  padding: 32rpx 0;
+}
+.record-list .list-con .list{
+  padding-left: 40rpx;
+  padding-right: 28rpx;
+  font-size: 22rpx;
+  color: #888;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30rpx;
+}
+.record-list .list-con .list:last-child{
+  margin-bottom: 0;
+}
+
+.layer-wrap {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+}
+
+.layer-wrap .layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+}
+
+.layer-wrap .sel-box {
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.layer-wrap .sel-box .sel-panel {
+  padding: 35rpx 35rpx 96rpx 35rpx;
+}
+
+.layer-wrap .sel-box .sel-panel .hd {
+  margin-bottom: 20rpx;
+}
+
+.layer-wrap .sel-box .sel-panel .hd text {
+  display: flex;
+  font-size: 24rpx;
+  color: #1f1f1f;
+}
+
+.layer-wrap .sel-box .sel-panel .bd {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40rpx;
+}
+
+.layer-wrap .sel-box .sel-panel .bd .item {
+  display: flex;
+  min-width: 106rpx;
+  padding: 0 10rpx;
+  height: 60rpx;
+  font-size: 28rpx;
+  color: #1f1f1f;
+  border: 2rpx solid #cccccc;
+  border-radius: 5rpx;
+  align-items: center;
+  justify-content: center;
+ 
+}
+.layer-wrap .sel-box .sel-panel .bd .item.checked{
+  background: url(data:img/jpg;base64,/9j/4QAYRXhpZgAASUkqAAgAAAAAAAAAAAAAAP/sABFEdWNreQABAAQAAAA8AAD/4QMxaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLwA8P3hwYWNrZXQgYmVnaW49Iu+7vyIgaWQ9Ilc1TTBNcENlaGlIenJlU3pOVGN6a2M5ZCI/PiA8eDp4bXBtZXRhIHhtbG5zOng9ImFkb2JlOm5zOm1ldGEvIiB4OnhtcHRrPSJBZG9iZSBYTVAgQ29yZSA1LjYtYzAxNCA3OS4xNTY3OTcsIDIwMTQvMDgvMjAtMDk6NTM6MDIgICAgICAgICI+IDxyZGY6UkRGIHhtbG5zOnJkZj0iaHR0cDovL3d3dy53My5vcmcvMTk5OS8wMi8yMi1yZGYtc3ludGF4LW5zIyI+IDxyZGY6RGVzY3JpcHRpb24gcmRmOmFib3V0PSIiIHhtbG5zOnhtcD0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wLyIgeG1sbnM6eG1wTU09Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9tbS8iIHhtbG5zOnN0UmVmPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvc1R5cGUvUmVzb3VyY2VSZWYjIiB4bXA6Q3JlYXRvclRvb2w9IkFkb2JlIFBob3Rvc2hvcCBDQyAyMDE0IChNYWNpbnRvc2gpIiB4bXBNTTpJbnN0YW5jZUlEPSJ4bXAuaWlkOjBCRTExOTE0QUZGMTExRThBRUE1RDg1MEYyRjI5RTMwIiB4bXBNTTpEb2N1bWVudElEPSJ4bXAuZGlkOjBCRTExOTE1QUZGMTExRThBRUE1RDg1MEYyRjI5RTMwIj4gPHhtcE1NOkRlcml2ZWRGcm9tIHN0UmVmOmluc3RhbmNlSUQ9InhtcC5paWQ6QzJDNzlBMDlBRkU2MTFFOEFFQTVEODUwRjJGMjlFMzAiIHN0UmVmOmRvY3VtZW50SUQ9InhtcC5kaWQ6QzJDNzlBMEFBRkU2MTFFOEFFQTVEODUwRjJGMjlFMzAiLz4gPC9yZGY6RGVzY3JpcHRpb24+IDwvcmRmOlJERj4gPC94OnhtcG1ldGE+IDw/eHBhY2tldCBlbmQ9InIiPz7/7gAOQWRvYmUAZMAAAAAB/9sAhAAGBAQEBQQGBQUGCQYFBgkLCAYGCAsMCgoLCgoMEAwMDAwMDBAMDg8QDw4MExMUFBMTHBsbGxwfHx8fHx8fHx8fAQcHBw0MDRgQEBgaFREVGh8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx8fHx//wAARCAApACsDAREAAhEBAxEB/8QAjwAAAwADAQAAAAAAAAAAAAAAAAUHAwQIBgEAAgMBAQAAAAAAAAAAAAAAAAYDBAUHAhAAAQMCAwYEAgsAAAAAAAAAAQIDBAAFERIGITFBUUITIlIjFGGxocFyorJDU3QVFjYRAAIBAgQEBAUFAAAAAAAAAAECABEDITEEBUFRcRJhkUIT8IGhwdGxUnIzFf/aAAwDAQACEQMRAD8A6pohCiEKIQohE2ptTwrFE7juDkpwH28cHao8zySOdUNfuCadanFjkPjhL+g0D6hqDBRmZMP7rfe93u4ju+695my9fa7OX7Hb8OFKH+rerWor3d3zp2+VMI2/5dmlKGnb2/Kvd51xlop+iHCiEKIRHqrVcOxRcTg7NcHoR8fvK5JH01nbjuKadebnIfHCaO37e2obkgzPxxkeuNxmXGW5LluF19w4lR3AcABwApFv33usWY1JjvZsraUKooBNaopLOhq6hOZQohPP6s1dFsUbInB24OD0WOAHnXhuT86zNy3JdOtM3OQ+5mnt22tqGrkgzP2EkE6dKnSnJUpwuvunFaz8hyApGu3WuMWY1JjtatLbUKooBCLBlS+77dsrDLanXTiAEoQMSSTgKLdpnr2jIVPSFy6qU7jmaDrMFRySdDV1Ccynm9X6xjWNgss4O3Jwem1wQD1r+ocaydz3NdOKDG4eHLxM1dt2xtQanBB9fASUShc5qXbpIDjyVuZXZJBIzkY5SeGzcKTLnuXK3GqccT4xyt+3bpbWgwwHhMMSJIlyW40dBcfdUEtoG8k1Hbts7BVFSZ7uXFRSzGgEa3aXHhRf4WAsLbBCrhKT+e6npSf02+nmdtXdTcW2vsocPUf3H8Dh5ynp7bXG91xj6R+0fk8fKJaz5fle1jrNiytGLGIduax4U70tA9S/jyFPG6boLA7VxuH6dYk7ZtZvnubC3+vSSWRIfkvrffWXHnCVLcUcSSaSXcuSzGpMdEQKAqigE2LZdpdudUtghTbgyvx3BmacT5VpO+pdPqWtGoyOY4HrIr+nW6KHMZHiOkZO3i0RYryrOw7HmzBkeU4QoMNkeJDKt5z+Y7cNlW21VpFPtAq7Z19I5L158pVXTXXYe6QyrlT1Hm3TlziGs2aMKIRpqj/RXL9w5+Krm4f3v/IypoP6E/iIrqnLcKIQohCiEKIT/9k=) no-repeat right bottom/43rpx 41rpx;
+  border-color: #f9821e;
+}
+.layer-wrap .sel-box .post {
+  
+}
+
+.layer-wrap .sel-box .post textarea {
+  border: 1rpx solid #e5e5e5;
+  font-size: 22rpx;
+  color: #666;
+  width: auto;
+  padding: 20rpx 20rpx;
+}
+
+.layer-wrap .sel-box .donate-btn {
+  height: 96rpx;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  left: 0;
+}
+
+.layer-wrap .sel-box .donate-btn button {
+  background-color: #f86845;
+  border-radius: 0;
+  color: #fff;
+  font-size: 32rpx;
+  height: 100%;
+  line-height: 100rpx;
+  text-align: center;
+}
+
+.layer-wrap .sel-box .post {
+  margin-bottom: 50rpx;
+}
+
+.layer-wrap .sel-box .post input {
+  border: 1rpx solid #e5e5e5;
+  font-size: 22rpx;
+  color: #666;
+  width: auto;
+  padding: 10rpx;
+}
+
+.footer{
+  text-align: center;
+  color: #888;
+  font-size: 26rpx;
+  padding: 16rpx;
+}

@@ -1,0 +1,12 @@
+<view class="page">
+  <view class='settings-wrap'>
+    <navigator class='cell' url='/pages/modifyPhone/modifyPhone?phone={{userInfo.Account}}'>
+      <text class='title'>手机号码</text>
+      <text class='value'>{{userInfo.Account}}</text>
+    </navigator>
+    <navigator class='cell' url='/pages/modifyEmail/modifyEmail?email={{userInfo.Email}}'>
+      <text class='title'>邮箱</text>
+      <text class='value'>{{userInfo.Email}}</text>
+    </navigator>
+  </view>
+</view>

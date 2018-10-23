@@ -1,0 +1,22 @@
+<view class="page">
+  <view class='list'>
+    <view class='cell' wx:for="{{addressList}}" wx:key="{{index}}">
+      <view class='info' bindtap='selectAddress' data-index='{{index}}'>
+        <view class='top'>
+          <text class='name'>收件人：{{item.UserName}}</text>
+          <text class='tel'>{{item.UserPhone}}</text>
+        </view>
+        <view class='bottom'>
+          <image class="icon" src='../../imgs/invoice-address.png'></image>
+          <text class='address'>收件地址：{{item.Address}}</text>
+        </view>
+      </view>
+      <!-- 编辑按钮 -->
+      <view class='edit' bindtap='editAddress' data-id='{{item.Id}}' wx:if='{{!hideEdit}}'>编辑</view>
+    </view>
+  </view>
+  <!-- 底部按钮 -->
+  <view class='bottom-btn'>
+    <view class='btn' bindtap='addAddress'>+新增收件地址</view>
+  </view>
+</view>

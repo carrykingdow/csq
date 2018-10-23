@@ -1,0 +1,3 @@
+<!--pages/certificate/certificate.wxml-->
+
+<image src='https://timg.hyejia.org/htmlToImg.aspx?Id={{id}}&pfid={{pfid}}&Type=1'></image>

@@ -1,0 +1,35 @@
+page {
+  background-color: #f5f5f5;
+}
+
+.donate-list {
+  background: #fff;
+  margin-top: 20rpx;
+}
+
+.donate-list .list {
+  display: flex;
+  padding: 30rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.donate-list .title {
+  color: #999;
+}
+.donate-list .con{
+  color: #000;
+}
+.donate-list .list .cell {
+  font-size: 28rpx;
+  text-align: center;
+}
+
+.donate-list .list .cell1{
+  flex:2;
+}
+.donate-list .list .cell2{
+  flex:2;
+}
+.donate-list .list .cell3{
+  flex:3;
+}

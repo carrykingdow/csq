@@ -1,0 +1,51 @@
+<view class="page">
+  <view class='nav'>
+    <text bindtap='tab' data-index="0" class='{{tabIndex==0?"cur":""}}'>项目</text>
+    <text bindtap='tab' data-index="1" class='{{tabIndex==1?"cur":""}}'>基金</text>
+  </view>
+
+  <!-- 项目收藏 -->
+  <checkbox-group class='collect-list' wx:if="{{tabIndex==0}}" bindchange="collectCheck">
+    <view class="radio" wx:for="{{collectList}}" wx:key='{{index}}'>
+      <checkbox value="{{item.Id}}" checked="{{checkAll}}" color='#ff6201' />
+      <navigator class='con' url='/pages/projectDetail/projectDetail?id={{item.CollectionId}}'>
+      <image class='avatar' src='{{domainImage}}{{item.TitleImgUrl}}'></image>
+        <view class='top'>
+          <text class='name'>{{item.Title}}</text>
+           <text class='date'>收藏日期：{{item.AddTime}}</text>
+        </view>
+      </navigator>
+    </view>
+  </checkbox-group>
+
+
+<!-- 基金收藏 -->
+
+  <checkbox-group class='collect-list' wx:if="{{tabIndex==1}}" bindchange="foundCollectCheck">
+    <view class="radio" wx:for="{{foundCollectList}}" wx:key='{{index}}'>
+      <checkbox value="{{item.Id}}" checked="{{checkAll}}" color='#ff6201' />
+      <navigator class='con'url="/pages/foundationDetail/foundationDetail?Id={{item.CollectionId}}">
+      <image class='avatar' src='{{domainImage}}{{item.TitleImgUrl}}'></image>
+        <view class='top'>
+          <text class='name'>{{item.Title}}</text>
+        <text class='date'>收藏日期：{{item.AddTime}}</text>          
+        </view>
+      </navigator>
+    </view>
+  </checkbox-group>
+
+  <!-- 底部按钮 -->
+  <view class='bottom-btn'>
+    <view class='btn'>
+      <view class='left' >
+      <checkbox-group bindchange='checkAll'>
+        <label>
+          <checkbox color="#ff6201" checked='{{checkAllBtn}}' />全选
+        </label>
+         </checkbox-group>
+      </view>
+      <view class='right {{checkIds.length == 0? "dis":""}}' bindtap='removeC'>删除</view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,71 @@
+/* pages/register/index.wxss */
+.w-flex{
+  display: flex;
+  align-items: center;
+  border-bottom: 1rpx solid #eee;
+  padding-left: 20rpx;
+  padding-right: 20rpx;
+}
+
+.w-flex label{
+  width: 120rpx;
+}
+
+.w-flex input{
+  flex: 1;
+  padding: 20rpx;
+}
+
+.header{
+  padding: 40rpx;
+  text-align: center
+}
+
+.header image{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+
+.query-wrap .query-item{
+  margin:  0 30rpx;
+  background-color: #fff;
+  border-radius: 40rpx;
+  overflow: hidden;
+  border: 2rpx solid #e0e0e0;
+  margin-top: 20rpx;
+  margin-bottom: 30rpx;
+  display: flex;
+  align-items: center
+}
+.query-wrap .query-item input{
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #393939;
+  padding: 0 30rpx;
+  flex: 1
+}
+.query-wrap .query-btn{
+  width: 680rpx;
+  height: 90rpx;
+  margin: 0 auto;
+  border-radius:45rpx;
+  border: none;
+  background-color: #f8592d;
+  color: #fff; 
+  font-size: 32rpx;
+  line-height: 90rpx;
+  text-align: center;
+}
+
+
+button[plain]{
+  font-size: 32rpx;
+  border: none;
+  border-left: 1rpx solid #eee;
+  color: #ccc;
+  padding: 0;
+  padding-left: 10rpx;
+  margin-right: 30rpx;
+  border-radius: 0
+}

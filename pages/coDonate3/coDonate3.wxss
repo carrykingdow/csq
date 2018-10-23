@@ -1,0 +1,216 @@
+page{
+  background-color: #f5f5f5;
+}
+.bg{
+  width: 100%;
+  height: 202rpx;
+
+}
+ image{
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.invite-info{
+  background-color: #fff;
+  padding-top: 70rpx;
+  padding: 70rpx 30rpx 30rpx 30rpx;
+  position: relative;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+
+.invite-info .avatar{
+  width: 140rpx;
+  height: 140rpx;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%,0);
+  top: -70rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.invite-info .title{
+  font-size: 30rpx;
+  color: #393939;
+  display: block;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}
+.invite-info .article{
+  font-size: 26rpx;
+  color: #999;
+}
+.progress{
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30rpx;
+  height: 100rpx;
+  background: #fff;
+  align-items: center;
+}
+.progress .section{
+  font-size: 28rpx;
+  color: #393939;
+}
+.progress .section .s{
+  color: #f8592d;
+}
+.helper-info{
+  padding: 30rpx;
+  margin-top: 20rpx;
+  background-color: #fff;
+  display: flex;
+}
+.helper-info .thumb{
+  width: 240rpx;
+  height: 180rpx;
+
+}
+.helper-info .detail{
+  margin-left: 20rpx;
+  max-width: 414rpx;
+}
+.helper-info .detail .title{
+  display: block;
+  overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+font-size: 30rpx;
+color: #333;
+}
+.helper-info .detail .con{
+  font-size: 24rpx;
+  color: #888;
+  line-height: 30rpx;
+  margin-top: 15rpx;
+}
+.helper-info .detail .con .s{
+  color: #666;
+}
+
+.helper-info .detail .con .s-d{
+  color: #666;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+  overflow:hidden;
+
+}
+.ml-30{
+  margin-left: 30rpx;
+}
+
+.join-wrap{
+  height: 90rpx;
+  padding: 0 33rpx;
+  display: flex;
+  align-items: center;
+  font-size: 28rpx;
+  color: #393939;
+  background-color: #fff;
+  margin-top:20rpx; 
+}
+.join-wrap image{
+  width: 28rpx;
+  height: 28rpx;
+  display: block;
+  margin-right: 12rpx;
+}
+.btns{
+  display: flex;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+.btns text{
+  flex: 1;
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;font-size: 32rpx;
+  color: #393939;
+}
+.btns text.ok{
+  color: #fff;
+  	background-color: #f8592d;
+}
+.btns button{
+  height:94rpx;
+border:0px;
+border-radius:0px;
+width:50%;
+font-size:32rpx;
+line-height:94rpx;
+background-color:#fff;
+}
+.btns button::after{border:0}
+.record-item {
+  padding: 40rpx 0rpx;
+  display: flex;
+  border-bottom: 1rpx solid #e5e5e5;
+}
+
+.record-item:last-child {
+  border-bottom: 0;
+}
+
+.record-item .avatar image {
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+  background-color: #f86845;
+}
+
+.record-item .info {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin-left: 14rpx;
+  width:100%;
+}
+
+.record-item .info .user {
+  display: flex;
+  font-size: 28rpx;
+  line-height: 40rpx;
+  align-items: center;
+}
+
+.record-item .info .user .name {
+  color: #393939;
+}
+
+.record-item .info .user .tag {
+  color: #f86845;
+}
+
+.record-item .info .time {
+  font-size: 22rpx;
+  color: #999;
+  line-height: 40rpx;
+}
+
+.record-item .info .post {
+  font-size: 26rpx;
+  color: #666;
+}
+
+.record-item .info .donate {
+  font-size: 24rpx;
+  position: absolute;
+  right: 0;
+  top: 7rpx;
+  display: flex;
+  color: #343434;
+}
+
+.record-item .info .donate text {
+  display: flex;
+  color: #f86845;
+}
+.con-record{
+  background-color:#fff;
+  padding:0 30rpx;
+}

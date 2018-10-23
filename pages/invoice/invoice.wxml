@@ -1,0 +1,64 @@
+<view class="page">
+  <view class='nav'>
+    <text bindtap='tab' data-index="0" class='{{tabIndex==0?"cur":""}}'>我申请的发票</text>
+    <text bindtap='tab' data-index="1" class='{{tabIndex==1?"cur":""}}'>待开具的发票</text>
+  </view>
+  <!-- invoice list -->
+  <view class='invoice-list' wx:if="{{tabIndex==0}}">
+    <view class='invoice-list-item' wx:for="{{invoiceList}}" wx:key="{{index}}">
+      <view class='hd'>
+        <text class='time'>申请时间：{{item.AddTime}}</text>
+        <text class='status ok'>
+          <block wx:if="{{item.Status == 1}}">已通过</block>
+          <block wx:if="{{item.Status == 0}}">不通过</block>
+          <block wx:if="{{item.Status == 2}}">待审核</block>
+        </text>
+      </view>
+      <view class='bd'>
+        <view class='cell'>
+          <text class='name'>抬头</text>
+          <text class='value'>{{item.Invoicetitle}}</text>
+        </view>
+        <view class='cell'>
+          <text class='name'>开具金额</text>
+          <text class='value'>￥{{item.Invoicemoney}}</text>
+        </view>
+        <view class='cell'>
+          <text class='name'>快递单号</text>
+          <text class='value'>{{item.Couriernumber}}</text>
+        </view>
+      </view>
+    </view>
+    <view class='footer' hidden='{{noMore}}'>--无更多数据--</view>
+  </view>
+  <!-- wait list -->
+
+  <checkbox-group class='wait-list' wx:if="{{tabIndex==1}}" bindchange="checkboxChange">
+    <label class="checkbox" wx:for="{{donationList}}" wx:key="{index}">
+      <checkbox value="{{item.Id}}" data-money='{{item.DoMoney}}' checked="{{checkAll}}" wx:if="{{item.ValiditDate != '已过期，无法开具'}}" />
+      <view class='con'>
+        <view class='top'>
+          <text class='name'>{{item.Title}}</text>
+          <text class='money'>￥{{item.DonMoney}}</text>
+        </view>
+        <text class='date'>有效期：{{item.ValiditDate}}</text>
+      </view>
+    </label>
+  </checkbox-group>
+
+  <!-- 底部按钮 -->
+  <view class='bottom-btn' wx:if="{{tabIndex==1}}">
+    <view class='btn'>
+      <view class='left'>
+        <label>
+          <checkbox-group bindchange="checkboxAllChange" checked="{{checkedAllBtn}}">
+            <checkbox value='1'/>全选
+          </checkbox-group>
+        </label>
+        <text class='total-money'>合计<text>￥{{totalAmount}}</text></text>
+      </view>
+      <view class='right {{checkIds.length == 0? "dis":""}}' bindtap='applyInvoice'>合开发票</view>
+    </view>
+
+  </view>
+</view>

@@ -1,0 +1,39 @@
+<view class="page">
+  <view class='info-panel'>
+    <!-- user info -->
+    <form bindsubmit='saveUser'>
+      <view class='user-info'>
+        <view class='avatar'>
+          <image src='{{userInfo.HeadImgUrl}}'></image>
+          <view class='mask' hidden='true'></view>
+        </view>
+        <view class='detail'>
+          <text class='id'>{{userInfo.UserNo}}</text>
+        </view>
+      </view>
+      <!-- user setting -->
+      <view class='user-setting'>
+        <view class='cell'>
+          <text class='label'>昵称</text>
+          <input maxlength="10" name="UserName" placeholder="请填写昵称" value='{{userInfo.NickName}}' />
+        </view>
+        <view class='cell'>
+          <text class='label'>性别</text>
+          <view class='sex-box'>
+            <view class='box {{defaultSex==index?"s-cur":""}}' wx:for="{{sex}}" wx:key="{{index}}" data-index="{{index}}" bindtap='selSex'>{{item}}</view>
+          </view>
+        </view>
+        <view class='cell'>
+          <text class='label'>出生日期</text>
+          <picker mode="date" bindchange='selDate'>
+            <view class="pickVal">{{date}}</view>
+          </picker>
+        </view>
+      </view>
+
+      <button form-type='submit' class="query-btn">保存</button>
+    </form>
+  </view>
+
+
+</view>

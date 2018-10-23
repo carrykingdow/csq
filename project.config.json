@@ -1,0 +1,200 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.3.0",
+	"appid": "wx77a8c12808edf5b9",
+	"projectname": "csq",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 25,
+			"list": [
+				{
+					"id": -1,
+					"name": "捐献成功",
+					"pathName": "pages/donateok/donateok",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "项目",
+					"pathName": "pages/project/project",
+					"query": ""
+				},
+				{
+					"id": 2,
+					"name": "项目详情",
+					"pathName": "pages/projectDetail/projectDetail",
+					"query": "id=153790177000000001"
+				},
+				{
+					"id": -1,
+					"name": "我的",
+					"pathName": "pages/my/my",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "个人资料",
+					"pathName": "pages/userInfo/userInfo",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "安全设置",
+					"pathName": "pages/safe/safe",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "客户定制",
+					"pathName": "pages/customMade/customMade",
+					"query": ""
+				},
+				{
+					"id": 7,
+					"name": "一起捐款",
+					"pathName": "pages/coDonate/coDonate",
+					"query": "id=153790177000000001"
+				},
+				{
+					"id": -1,
+					"name": "一起捐款2",
+					"pathName": "pages/coDonate2/coDonate2",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "在线查询",
+					"pathName": "pages/queryOnline/queryOnline",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "授权",
+					"pathName": "pages/auth/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "注册",
+					"pathName": "pages/register/index",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "公益历程",
+					"pathName": "pages/publicWelfare/publicWelfare",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "公益历程列表",
+					"pathName": "pages/publicWelfareList/publicWelfareList",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "基金查询 列表",
+					"pathName": "pages/foundation/foundation",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "基金详情",
+					"pathName": "pages/foundationDetail/foundationDetail",
+					"query": ""
+				},
+				{
+					"id": 16,
+					"name": "捐赠记录",
+					"pathName": "pages/donateRecord/donateRecord",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "捐赠记录详情",
+					"pathName": "pages/donateRecordDetail/donateRecordDetail",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的发票",
+					"pathName": "pages/invoice/invoice",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "发票申请",
+					"pathName": "pages/invoiceApply/invoiceApply",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的爱心账户",
+					"pathName": "pages/myLove/myLove",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的搜藏",
+					"pathName": "pages/myCollect/myCollect",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "我的一起捐",
+					"pathName": "pages/myCoDonate/myCoDonate",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "客服",
+					"pathName": "pages/custom/custom",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "管理地址",
+					"pathName": "pages/addAddress/addAddress",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "地址列表",
+					"pathName": "pages/addressList/addressList",
+					"query": ""
+				}
+			]
+		}
+	}
+}

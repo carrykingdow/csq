@@ -1,0 +1,32 @@
+<view class="page">
+
+  <!-- form -->
+  <form bindsubmit='saveAddress'>
+    <view class='form-wrap'>
+      <view class='item'>
+        <text class='label'>姓名</text>
+        <input placeholder='请填写姓名' name="UserName" placeholder-style='color:#ccc' value='{{address.UserName}}'></input>
+      </view>
+      <view class='item'>
+        <text class='label'>联系方式</text>
+        <input placeholder='请填写联系方式' name="UserPhone" placeholder-style='color:#ccc' value='{{address.UserPhone}}'></input>
+      </view>
+      <view class='item sel-address'>
+        <picker class='label' mode="region" bindchange='getRegion'>
+          <text class='key'>所在地区</text>
+          <text class='value'>{{regionVal?regionVal:"请选择"}}</text> 
+        </picker>
+        <input name="Address" value='{{street}}' placeholder='详细地址：如道路，门票号、小区、楼栋号单元室等' placeholder-style='color:#ccc'></input>
+      </view>
+      <!-- 设置默认地址 -->
+      <view class='item set-default'>
+        <text class='label'>设为默认地址</text>
+        <switch color="#f8592d" bindchange='changeDefault' checked='{{address.IsDefault == 1}}'></switch>
+      </view>
+    </view>
+    <!-- btn -->
+    <view class="submit-btn">
+      <button form-type='submit' plain>保存</button>
+    </view>
+  </form>
+</view>

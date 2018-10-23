@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/my/my",
+    "pages/donateok/donateok",
+    "pages/project/project",
+    "pages/projectDetail/projectDetail",
+    "pages/userInfo/userInfo",
+    "pages/safe/safe",
+    "pages/customMade/customMade",
+    "pages/coDonate/coDonate",
+    "pages/coDonate2/coDonate2",
+    "pages/coDonate3/coDonate3",
+    "pages/auth/index",
+    "pages/register/index",
+    "pages/queryOnline/queryOnline",
+    "pages/publicWelfare/publicWelfare",
+    "pages/publicWelfareList/publicWelfareList",
+    "pages/foundation/foundation",
+    "pages/foundationDetail/foundationDetail",
+    "pages/donateRecord/donateRecord",
+    "pages/donateRecordDetail/donateRecordDetail",
+    "pages/invoice/invoice",
+    "pages/invoiceApply/invoiceApply",
+    "pages/myLove/myLove",
+    "pages/myCollect/myCollect",
+    "pages/myCoDonate/myCoDonate",
+    "pages/custom/custom",
+    "pages/addAddress/addAddress",
+    "pages/addressList/addressList",
+    "pages/modifyPhone/modifyPhone",
+    "pages/modifyEmail/modifyEmail",
+    "pages/modifyPassword/modifyPassword",
+    "pages/certificate/certificate"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "丛善桥",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#888888",
+    "selectedColor": "#FB591E",
+    "borderStyle": "#eee",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "selectedIconPath": "imgs/home-san-cur.png",
+        "iconPath": "imgs/home-san.png",
+        "pagePath": "pages/index/index",
+        "text": "主页"
+      },
+      {
+        "selectedIconPath": "imgs/home-index-cur.png",
+        "iconPath": "imgs/home-index.png",
+        "pagePath": "pages/my/my",
+        "text": "我的"
+      },{
+        "selectedIconPath": "imgs/home-custom-cur.png",
+        "iconPath": "imgs/home-custom.png",
+        "pagePath": "pages/custom/custom",
+        "text": "客服"
+      }
+    ]
+  }
+}

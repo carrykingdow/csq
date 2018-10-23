@@ -1,0 +1,33 @@
+<view class="page">
+  <!-- banner -->
+  <view class='banner' style='height:{{height}}'>
+    <swiper indicator-dots="true" autoplay circular indicator-color="#fff" indicator-active-color="#fc5677">
+      <block wx:for="{{adList}}" wx:key="{{index}}">
+        <swiper-item>
+          <image src="{{domainImage}}{{item.ImgURL}}" class="slide-image" mode="aspectFill" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <!-- 快捷入口 -->
+  <view class='fast-nav'>
+    <navigator class='item' url='/pages/queryOnline/queryOnline'>
+      <view class='item-icon'>
+        <image src='../../imgs/index-search.png'></image>
+      </view>
+      <text>在线查询</text>
+    </navigator>
+    <navigator class='item' url='/pages/project/project'>
+      <view class='item-icon'>
+        <image src='../../imgs/index-shop.png'></image>
+      </view>
+      <text>公益超市</text>
+    </navigator>
+    <navigator class='item' url='/pages/customMade/customMade'>
+      <view class='item-icon'>
+        <image src='../../imgs/index-edit.png'></image>
+      </view>
+      <text>专属定制</text>
+    </navigator>
+  </view>
+</view>

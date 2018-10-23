@@ -1,0 +1,47 @@
+page{
+  background-color: #f5f5f5;
+}
+.foundation-list{
+  background-color: #fff;
+  margin-top: 20rpx;
+}
+.foundation-list .list{
+  padding: 30rpx;
+  border-bottom: 2rpx solid #f5f5f5;
+}
+.foundation-list .list .title{
+  font-size: 30rpx;
+  display: block;
+  line-height: 30rpx;
+  color: #333;
+}
+.foundation-list .list .info-wrap{
+  margin-top: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+.foundation-list .list .info-wrap .item text{
+  display: block;
+  line-height: 30rpx;
+}
+.foundation-list .list .info-wrap .item .name{
+  font-size: 22rpx;
+  color: #999;
+}
+.foundation-list .list .info-wrap .item .value{
+  font-size: 28rpx;
+  color: #393939;
+  margin-top: 15rpx;
+}
+.foundation-list .list .info-wrap .item .normal{
+  color: #0fd287;
+}
+.foundation-list .list .info-wrap .item .unusual{
+ color: #f8592d;
+}
+.footer{
+  text-align: center;
+  color: #888;
+  font-size: 26rpx;
+  padding: 16rpx;
+}

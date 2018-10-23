@@ -1,0 +1,55 @@
+<view class="page">
+  <view class='banner'>
+    <image src='{{domainImage}}{{found.TitleImgURL}}' mode="aspectFill"></image>
+    <view class='fullbg'></view>
+    <view class='text-wrap'>
+      <text class='chz'>{{found.Title}}</text>
+    </view>
+    <view class='collection'>
+      <text class='en'>{{found.PNumber}}</text>
+
+      <image bindtap='collection' src='/imgs/c-w.png'></image>
+    </view>
+  </view>
+  <!-- foundation info -->
+  <view class='foundation-info'>
+    <view class='detail'>
+      <view class='item'>
+        <text class='name'>发起方</text>
+        <text class='value'>{{found.TeamName}}</text>
+      </view>
+      <view class='item'>
+        <text class='name'>起始基金</text>
+        <text class='value'>￥{{found.InitialFunds}}</text>
+      </view>
+      <view class='item'>
+        <text class='name'>成立时间</text>
+        <text class='value'>{{found.AddTime}}</text>
+      </view>
+    </view>
+    <!-- introduce -->
+    <view class='introduce-wrap'>
+      <view class='item' bindtap='showModal'>
+        <text class='name'>挂靠单位：</text>
+        <text class='value'>丛善桥</text>
+      </view>
+      <view class='item no-arrow'>
+        <text class='key'>使用范围：</text>
+        <text class='val'>{{found.UseRange}}</text>
+      </view>
+    </view>
+  </view>
+  <!-- members -->
+  <view class='members-wrap'>
+    <text class='title'>管委会成员</text>
+    <view class='member-list'>
+      <view class='item' wx:for="{{personList}}" wx:key="{{index}}">
+        <image class='avatar'></image>
+        <view class='info'>
+          <text class='name'>{{item.username}}</text>
+          <text class='position'>{{item.position}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

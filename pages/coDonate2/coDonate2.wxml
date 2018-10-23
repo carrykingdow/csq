@@ -1,0 +1,52 @@
+<view class="page">
+  <view class='bg'>
+    <image src='../../imgs/co-donate2-bg.jpg'></image>
+  </view>
+  <!-- invite info -->
+  <view class='invite-info'>
+    <view class='avatar'>
+      <image src='{{userInfo.HeadImgURL}}'></image>
+    </view>
+    <text class='title'>{{userInfo.NickName}}</text>
+    <text class='article'>{{}}</text>
+  </view>
+  <!-- progress -->
+  <view class='progress'>
+    <view class='section'>
+      <text class='s'>已筹0元</text>/目标{{totalMoney}}元</view>
+    <view class='section'>
+      <text class='s'>{{endDate}}</text>前截止</view>
+  </view>
+
+  <!-- 求助者信息 -->
+  <view class='helper-info'>
+    <view class='thumb'>
+      <image src='{{domainImage}}{{project.TitleImgURL}}'></image>
+    </view>
+    <view class='detail'>
+      <text class='title'>{{project.Title}}</text>
+      <view class='con'>
+        <text class="s-d">{{project.TeamDetail}}</text>
+      </view>
+      <view class='con'>善款总目标
+        <text class="s">{{project.TotalAmount}}元</text>
+      </view>
+      <view class='con'>已筹款
+        <text class="s">{{project.DonationAmount}}元</text>
+        <text class='s ml-30'>{{project.DonorsNum}}</text>人献爱心</view>
+    </view>
+  </view>
+
+  <!-- 完成编辑后 展示当前项目参与人数 -->
+  <view class='join-wrap' wx:if="{{finishEdit}}">
+    <image src='../../imgs/coDonate-team.png'></image>
+    <text>0位好友参与</text>
+  </view>
+  <!-- 底部按钮 -->
+  <view class='btns'>
+    <text class='back' bindtap='back'>返回编辑</text>
+    <text class='ok' bindtap='publish'>完成发起</text>
+  </view>
+
+
+</view>
